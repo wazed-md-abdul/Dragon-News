@@ -1,19 +1,17 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import { CiBookmark, CiShare2, CiStar } from "react-icons/ci";
+import { CiBookmark, CiShare2 } from "react-icons/ci";
 import { FaEye } from "react-icons/fa";
 import { IoIosStar } from "react-icons/io";
 
 const NewsCard = ({ news }) => {
-    console.log(news);
-    
   return (
     <div className="card bg-base-100 shadow-sm">
-      <div className="card-body">
+      <div className="card-body p-4 sm:p-6">
         {/* Author info */}
-        <div className="flex justify-between items-center bg-slate-200 p-4">
-          <div className="flex gap-1 items-center">
+        <div className="flex flex-wrap items-start justify-between gap-3 bg-slate-200 p-4">
+          <div className="flex min-w-0 gap-2 items-center">
             {news.author?.img ? (
               <Image
                 src={news.author.img}
@@ -26,18 +24,18 @@ const NewsCard = ({ news }) => {
             ) : (
               <div className="h-10 w-10 rounded-full bg-slate-300" />
             )}
-            <div>
-              <h2 className="font-semibold">{news.author?.name}</h2>
+            <div className="min-w-0">
+              <h2 className="truncate font-semibold">{news.author?.name}</h2>
               <p className="text-xs">{news.author?.published_date}</p>
             </div>
           </div>
-          <div className="flex justify-between items-center">
+          <div className="flex items-center gap-2">
             <CiShare2 className="text-xl" />
             <CiBookmark className="text-xl" />
           </div>
         </div>
 
-        <h2 className="card-title">{news.title}</h2>
+        <h2 className="card-title text-lg sm:text-xl">{news.title}</h2>
 
         <figure>
           {news.image_url ? (
@@ -47,10 +45,10 @@ const NewsCard = ({ news }) => {
               width={300}
               height={300}
               unoptimized
-              className="h-auto w-full"
+              className="h-auto w-full rounded-md object-cover"
             />
           ) : (
-            <div className="flex h-[300px] w-full items-center justify-center bg-slate-200 text-sm text-slate-500">
+            <div className="flex h-[220px] w-full items-center justify-center rounded-md bg-slate-200 text-sm text-slate-500 sm:h-[300px]">
               No image available
             </div>
           )}
@@ -58,8 +56,8 @@ const NewsCard = ({ news }) => {
 
         <p className="line-clamp-3">{news.details}</p>
 
-        <div className="flex items-center justify-between gap-2">
-          <div className="flex items-center gap-2">
+        <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+          <div className="flex flex-wrap items-center gap-3">
             <h2 className="flex items-center gap-2">
               <IoIosStar className="text-lg text-yellow-500" />
 
@@ -71,8 +69,8 @@ const NewsCard = ({ news }) => {
             </h2>
           </div>
 
-          <Link href={`/news/${news._id}`}>
-            <button className="btn">See details</button>
+          <Link href={`/news/${news._id}`} className="w-full sm:w-auto">
+            <button className="btn w-full sm:w-auto">See details</button>
           </Link>
         </div>
       </div>

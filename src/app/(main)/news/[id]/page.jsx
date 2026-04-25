@@ -25,48 +25,58 @@ const NewsDetailsPage = async ({ params }) => {
   const news = await getNewsDetailsById(id);
   //   console.log(news, "news");
   return (
-    <div className="max-w-4xl mx-auto my-8 ">
+    <div className="mx-auto my-6 max-w-4xl px-4 sm:my-8">
       <div className="card bg-base-100 shadow-sm">
-        <div className="card-body">
+        <div className="card-body p-4 sm:p-6">
           {/* Author info */}
-          <div className="flex justify-between items-center bg-slate-200 p-4">
-            <div className="flex gap-1 items-center">
-              <Image
-                src={news.author?.img}
-                alt={news.author?.name}
-                height={40}
-                width={40}
-                className="rounded-full"
-                unoptimized
-              />
-              <div>
-                <h2 className="font-semibold">{news.author?.name}</h2>
+          <div className="flex flex-wrap items-start justify-between gap-3 bg-slate-200 p-4">
+            <div className="flex min-w-0 gap-2 items-center">
+              {news.author?.img ? (
+                <Image
+                  src={news.author.img}
+                  alt={news.author?.name || "Author image"}
+                  height={40}
+                  width={40}
+                  className="rounded-full"
+                  unoptimized
+                />
+              ) : (
+                <div className="h-10 w-10 rounded-full bg-slate-300" />
+              )}
+              <div className="min-w-0">
+                <h2 className="truncate font-semibold">{news.author?.name}</h2>
                 <p className="text-xs">{news.author?.published_date}</p>
               </div>
             </div>
-            <div className="flex justify-between items-center">
+            <div className="flex items-center gap-2">
               <CiShare2 className="text-xl" />
               <CiBookmark className="text-xl" />
             </div>
           </div>
 
-          <h2 className="card-title">{news.title}</h2>
+          <h2 className="card-title text-lg sm:text-2xl">{news.title}</h2>
 
           <figure>
-            <Image
-              src={news.image_url}
-              alt={news.title}
-              width={300}
-              height={300}
-              className="w-full"
-              unoptimized
-            />
+            {news.image_url ? (
+              <Image
+                src={news.image_url}
+                alt={news.title}
+                width={300}
+                height={300}
+                className="w-full rounded-md object-cover"
+                unoptimized
+              />
+            ) : (
+              <div className="flex h-[240px] w-full items-center justify-center rounded-md bg-slate-200 text-sm text-slate-500 sm:h-[360px]">
+                No image available
+              </div>
+            )}
           </figure>
 
-          <p className="">{news.details}</p>
+          <p className="text-sm leading-7 sm:text-base">{news.details}</p>
 
-          <div className="flex items-center justify-between gap-2">
-            <div className="flex items-center gap-2">
+          <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+            <div className="flex flex-wrap items-center gap-3">
               <h2 className="flex items-center gap-2">
                 <IoIosStar className="text-lg text-yellow-500" />
 
@@ -78,8 +88,8 @@ const NewsDetailsPage = async ({ params }) => {
               </h2>
             </div>
 
-            <Link href={`/category/${news.category_id}`}>
-              <button className="btn bg-purple-500 text-white">
+            <Link href={`/category/${news.category_id}`} className="w-full sm:w-auto">
+              <button className="btn w-full bg-purple-500 text-white sm:w-auto">
                 See other news for this category <BsArrowRight />
               </button>
             </Link>

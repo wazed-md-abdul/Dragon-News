@@ -16,9 +16,8 @@ const LeftSidebar = ({ categories, activeId }) => {
             >
               <Link
                 href={`/category/${category.category_id}`}
-                className="block  p-2"
+                className="block rounded-md px-3 py-2 text-sm sm:text-base"
               >
-                {" "}
                 {category.category_name}
               </Link>
             </li>
