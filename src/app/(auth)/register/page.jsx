@@ -1,14 +1,37 @@
 "use client";
+import { authClient } from "@/lib/auth-client";
 import { Check } from "@gravity-ui/icons";
-import { Button, Description, FieldError, Form, Input, Label, TextField, Checkbox } from "@heroui/react";
+import { Button,toast, Toast , Description, FieldError, Form, Input, Label, TextField, Checkbox } from "@heroui/react";
 
 import Link from "next/link";
 
-export default function Login() {
-    const onSubmit = (e) => {
+export default  function Login () {
+    const onSubmit  = async (e) => {
         e.preventDefault();
         const formDataObj = Object.fromEntries(new FormData(e.currentTarget));
         console.log(formDataObj);
+        const {data,error} = await authClient.signUp.email(formDataObj);
+        if(error){
+            toast.warning(`${error.message}`, {
+              actionProps: {
+                children: "Error",
+                className: "bg-warning text-warning-foreground",
+                
+              },
+              description: "Go to login page",
+            })
+        }
+        if(data){
+            toast.success("You have Successfully signed up", {
+              actionProps: {
+                children: "Success",
+                className: "bg-success text-success-foreground",
+              },
+              description: "No Go to login page",
+            })
+        }
+        
+
     };
 
     return (
@@ -34,7 +57,7 @@ export default function Login() {
                     <FieldError />
                 </TextField>
                 <TextField isRequired
-                    name="imageUrl"
+                    name="image"
                     type="text"
                     validate={(value) => {
                         if (!/^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/.test(value)) {
@@ -112,6 +135,7 @@ export default function Login() {
                 </div>
 
             </Form>
+              <Toast.Provider />
         </div>
     );
 }

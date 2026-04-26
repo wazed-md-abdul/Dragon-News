@@ -1,5 +1,6 @@
 import { Poppins } from "next/font/google";
 import "./globals.css";
+import { Toast } from "@heroui/react";
 
 const poppins = Poppins({
   variable: "--font-poppins",
@@ -21,6 +22,7 @@ export default function RootLayout({ children }) {
     >
       <body className={`min-h-full flex flex-col ${poppins.className}`}>
         {children}
+     
         </body>
     </html>
   );

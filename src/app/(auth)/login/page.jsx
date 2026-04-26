@@ -1,13 +1,40 @@
 "use client";
+import { authClient } from "@/lib/auth-client";
 import {Check} from "@gravity-ui/icons";
-import {Button, Description, FieldError, Form, Input, Label, TextField} from "@heroui/react";
+import {Button, Description, FieldError, Form, Input, Label,toast,Toast, TextField} from "@heroui/react";
 import Link from "next/link";
 
 export default function Login() {
-  const onSubmit = (e) => {
+  const onSubmit = async (e) => {
     e.preventDefault();
     const formDataObj = Object.fromEntries(new FormData(e.currentTarget));
-    console.log(formDataObj);
+    const {data,error} = await authClient.signIn.email(
+      {
+        ...formDataObj,
+      callbackURL: "/",
+      rememberMe: true,
+      }
+    );
+    if(error){
+        toast.warning(`${error.message}`, {
+          actionProps: {
+            children: "Error",
+            className: "bg-warning text-warning-foreground",
+            
+          },
+          description: "Invalid Credentials",
+        })
+    }
+    if(data){
+        toast.success("You have Successfully signed up", {
+          actionProps: {
+            children: "Success",
+            className: "bg-success text-success-foreground",
+          },
+          description: "Successfully Logged In",
+        })
+    }
+
   };
 
   return (
@@ -74,6 +101,7 @@ export default function Login() {
         <p className="text-sm font-light text-gray-400">Dont have an account?</p><Link href="/register">Register</Link>
             </div>
     </Form>
+     <Toast.Provider />
     </div>
   );
 }
