@@ -1,4 +1,3 @@
-import React from "react";
 import Marquee from "react-fast-marquee";
 
 const news = [
@@ -18,13 +17,24 @@ const news = [
 
 const BreakingNews = () => {
   return (
-    <div className="flex justify-between gap-4 items-center bg-gray-200 py-4 px-2 container mx-auto">
-      <button className="btn bg-red-500 text-white">Latest News</button>
-      <Marquee pauseOnHover={true} speed={100}>
-        {news.map((n) => (
-          <span key={n._id}>{n.title}</span>
-        ))}
-      </Marquee>
+    <div className="container mx-auto px-4">
+      <div className="surface-panel reveal-up reveal-delay-1 flex items-center gap-4 rounded-[26px] px-3 py-3">
+        <span className="hidden rounded-full border border-red-200 bg-red-50 px-3 py-1 text-xs font-semibold uppercase tracking-[0.24em] text-red-500 sm:inline-flex">
+          Live
+        </span>
+        <button className="btn border-0 bg-[linear-gradient(135deg,#ef4444,#f97316)] text-white shadow-[0_16px_34px_rgba(239,68,68,0.22)]">
+          Latest News
+        </button>
+        <div className="min-w-0 flex-1">
+          <Marquee pauseOnHover speed={80}>
+            {news.map((n) => (
+              <span key={n._id} className="marquee-item text-sm font-medium text-slate-600 sm:text-[15px]">
+                {n.title}
+              </span>
+            ))}
+          </Marquee>
+        </div>
+      </div>
     </div>
   );
 };

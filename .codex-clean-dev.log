@@ -1,0 +1,123 @@
+▲ Next.js 16.2.4 (Turbopack)
+- Local:         http://localhost:3000
+- Network:       http://198.18.0.1:3000
+- Environments: .env
+✓ Ready in 582ms
+Creating turbopack project { dir: 'A:\\web dev\\newsjournal', testMode: true }
+
+ HEAD /about-us 200 in 599ms (next.js: 245ms, application-code: 354ms)
+ GET /about-us 200 in 238ms (next.js: 4ms, application-code: 234ms)
+ GET /career 200 in 246ms (next.js: 129ms, application-code: 117ms)
+ GET /category/01 200 in 923ms (next.js: 736ms, application-code: 187ms)
+ GET /career 200 in 89ms (next.js: 4ms, application-code: 85ms)
+ GET /about-us 200 in 210ms (next.js: 65ms, application-code: 145ms)
+ GET /category/01 200 in 907ms (next.js: 20ms, application-code: 887ms)
+ GET / 307 in 138ms (next.js: 46ms, application-code: 92ms)
+ GET /category/01 200 in 1301ms (next.js: 13ms, application-code: 1288ms)
+ GET /api/auth/get-session 200 in 2.4s (next.js: 1703ms, application-code: 682ms)
+ GET /category/02 200 in 625ms (next.js: 13ms, application-code: 612ms)
+2e78e5e0310c2e9adbb6efb1a263e745 params
+{
+  _id: '2e78e5e0310c2e9adbb6efb1a263e745',
+  others_info: { is_todays_pick: false, is_trending: true },
+  category_id: '02',
+  rating: { number: 4.5, badge: 'Excellent' },
+  total_view: null,
+  title: 'Tucker Carlson: Putin Winning in Ukraine, Biden Hurting West',
+  author: {
+    name: null,
+    published_date: '2022-08-30 15:00:04',
+    img: 'https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dXNlcnxlbnwwfHwwfHw%3D&w=1000&q=80'
+  },
+  thumbnail_url: 'https://i.ibb.co/k8XBcMX/unsplash-Eh-Tc-C9s-YXsw-15.png',
+  image_url: 'https://i.ibb.co/BZZ5WKv/unsplash-Eh-Tc-C9s-YXsw-4.png',
+  details: "Fox News's top-rated host, Tucker Carlson, claimed on Monday night that Russian President Vladimir Putin is in fact winning the war in Ukraine, and President Joe Biden's insistence that Putin surrenders his campaign to take over Ukraine is actually evidence Biden's ultimate goal is to 'destroy the West.' Carlson arrived at his bizarre claim after railing against European and American military aid to Ukraine. 'Italy's Ukraine funding is a lot, but it's not quite as much as France. France has sent more than $2 billion U."
+} news
+ GET /news/2e78e5e0310c2e9adbb6efb1a263e745 200 in 1153ms (next.js: 791ms, application-code: 362ms)
+ GET /career 200 in 42ms (next.js: 4ms, application-code: 38ms)
+ GET /about-us 200 in 40ms (next.js: 3ms, application-code: 36ms)
+ GET /career 200 in 35ms (next.js: 3ms, application-code: 32ms)
+ GET /about-us 200 in 37ms (next.js: 3ms, application-code: 34ms)
+ GET / 200 in 25ms (next.js: 3ms, application-code: 22ms)
+ GET /category/01 200 in 499ms (next.js: 3ms, application-code: 496ms)
+ GET /category/01 200 in 706ms (next.js: 13ms, application-code: 694ms)
+ POST /api/auth/sign-out 200 in 129ms (next.js: 11ms, application-code: 118ms)
+ GET /api/auth/get-session 200 in 10ms (next.js: 2ms, application-code: 7ms)
+ POST /api/auth/sign-in/social 404 in 22ms (next.js: 11ms, application-code: 11ms)
+ POST /api/auth/sign-in/social 200 in 87ms (next.js: 11ms, application-code: 76ms)
+ GET /api/auth/callback/github?code=394a6dc23176b376ba5e&state=11KkxinVQyVg-uJKzI_SrC8tu_jLN_GC 302 in 2.5s (next.js: 3ms, application-code: 2.5s)
+ GET / 307 in 82ms (next.js: 3ms, application-code: 79ms)
+ GET /api/auth/get-session 200 in 124ms (next.js: 11ms, application-code: 113ms)
+ GET /category/01 200 in 908ms (next.js: 11ms, application-code: 897ms)
+ GET /category/01 200 in 381ms (next.js: 12ms, application-code: 369ms)
+ GET /api/auth/get-session 200 in 140ms (next.js: 12ms, application-code: 128ms)
+ GET /category/01 200 in 405ms (next.js: 11ms, application-code: 394ms)
+ GET /api/auth/get-session 200 in 120ms (next.js: 11ms, application-code: 109ms)
+ GET /category/01 200 in 380ms (next.js: 12ms, application-code: 368ms)
+ GET /api/auth/get-session 200 in 127ms (next.js: 3ms, application-code: 124ms)
+ GET /category/01 200 in 380ms (next.js: 14ms, application-code: 366ms)
+ GET /api/auth/get-session 200 in 121ms (next.js: 11ms, application-code: 110ms)
+ GET /category/01 200 in 384ms (next.js: 11ms, application-code: 373ms)
+ GET /api/auth/get-session 200 in 110ms (next.js: 2ms, application-code: 108ms)
+ GET /category/01 200 in 439ms (next.js: 11ms, application-code: 428ms)
+ GET /api/auth/get-session 200 in 121ms (next.js: 11ms, application-code: 110ms)
+ GET / 307 in 89ms (next.js: 6ms, application-code: 83ms)
+ GET /api/auth/get-session 200 in 127ms (next.js: 12ms, application-code: 115ms)
+ GET /category/01 200 in 819ms (next.js: 12ms, application-code: 807ms)
+ GET /about-us 200 in 35ms (next.js: 3ms, application-code: 31ms)
+ GET / 200 in 29ms (next.js: 3ms, application-code: 26ms)
+ GET /category/01 200 in 478ms (next.js: 3ms, application-code: 475ms)
+ GET /category/01 200 in 706ms (next.js: 12ms, application-code: 694ms)
+0282e0e58a5c404fbd15261f11c2ab6a params
+{
+  _id: '0282e0e58a5c404fbd15261f11c2ab6a',
+  others_info: { is_todays_pick: false, is_trending: true },
+  category_id: '01',
+  rating: { number: 4.5, badge: 'Excellent' },
+  total_view: 488,
+  title: 'Biden Pledges Nearly $3 Billion To Ukraine In Largest U.S. Military Aid Package Yet',
+  author: {
+    name: 'Jimmy Dane',
+    published_date: '2022-08-24 17:27:34',
+    img: 'https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dXNlcnxlbnwwfHwwfHw%3D&w=1000&q=80'
+  },
+  thumbnail_url: 'https://i.ibb.co/QnwC4sG/unsplash-Eh-Tc-C9s-YXsw-11.png',
+  image_url: 'https://i.ibb.co/M23fhxm/unsplash-Eh-Tc-C9s-YXsw.png',
+  details: "Wednesday, August 24, 2022 | Tag Cloud Tags: Biden, EU, Euro, Europe, Joe Biden, Military, News, Russia, Security, UK, Ukraine, United States, Worthy News (Worthy News) – U.S. President Joe Biden has announced nearly $3 billion in new U.S. military aid for Kyiv as Ukraine marked its independence day six months after Russia invaded the country.'The United States of America is committed to supporting the people of Ukraine as they continue the fight to defend their sovereignty. As part of that commitment, I am proud to announce our biggest tranche of security assistance to date: approximately $2."
+} news
+ GET /news/0282e0e58a5c404fbd15261f11c2ab6a 200 in 146ms (next.js: 12ms, application-code: 134ms)
+ GET /category/01 200 in 651ms (next.js: 11ms, application-code: 640ms)
+ GET /category/02 200 in 277ms (next.js: 11ms, application-code: 266ms)
+ GET /category/03 200 in 261ms (next.js: 11ms, application-code: 249ms)
+ GET /about-us 200 in 33ms (next.js: 3ms, application-code: 30ms)
+ GET /career 200 in 33ms (next.js: 3ms, application-code: 30ms)
+ GET / 200 in 27ms (next.js: 3ms, application-code: 24ms)
+ GET /category/01 200 in 501ms (next.js: 3ms, application-code: 498ms)
+ GET /category/01 200 in 703ms (next.js: 13ms, application-code: 689ms)
+ GET /api/auth/get-session 200 in 122ms (next.js: 12ms, application-code: 111ms)
+ GET /api/auth/get-session 200 in 117ms (next.js: 2ms, application-code: 115ms)
+ GET /api/auth/get-session 200 in 135ms (next.js: 11ms, application-code: 124ms)
+ GET /category/01 200 in 840ms (next.js: 12ms, application-code: 829ms)
+ GET /about-us 200 in 39ms (next.js: 3ms, application-code: 36ms)
+ GET / 200 in 25ms (next.js: 3ms, application-code: 22ms)
+ GET /category/01 200 in 447ms (next.js: 3ms, application-code: 444ms)
+ GET /category/01 200 in 694ms (next.js: 16ms, application-code: 678ms)
+ GET /api/auth/get-session 200 in 128ms (next.js: 11ms, application-code: 117ms)
+ GET /category/01 200 in 885ms (next.js: 13ms, application-code: 872ms)
+ GET /category/01 200 in 382ms (next.js: 13ms, application-code: 369ms)
+ GET /api/auth/get-session 200 in 148ms (next.js: 14ms, application-code: 134ms)
+ GET /category/01 200 in 407ms (next.js: 12ms, application-code: 395ms)
+ GET /api/auth/get-session 200 in 117ms (next.js: 12ms, application-code: 106ms)
+ GET /category/01 200 in 411ms (next.js: 12ms, application-code: 399ms)
+ GET /api/auth/get-session 200 in 118ms (next.js: 11ms, application-code: 107ms)
+ GET /category/01 200 in 410ms (next.js: 11ms, application-code: 398ms)
+ GET /api/auth/get-session 200 in 131ms (next.js: 11ms, application-code: 119ms)
+ GET /category/01 200 in 374ms (next.js: 11ms, application-code: 363ms)
+ GET /api/auth/get-session 200 in 121ms (next.js: 13ms, application-code: 108ms)
+ GET /api/auth/get-session 200 in 147ms (next.js: 11ms, application-code: 136ms)
+ GET /api/auth/get-session 200 in 112ms (next.js: 2ms, application-code: 110ms)
+ GET /api/auth/get-session 200 in 132ms (next.js: 20ms, application-code: 112ms)
+ GET /api/auth/get-session 200 in 123ms (next.js: 2ms, application-code: 121ms)
+ GET /api/auth/get-session 200 in 122ms (next.js: 16ms, application-code: 106ms)
+ GET /api/auth/get-session 200 in 109ms (next.js: 2ms, application-code: 106ms)
+/*! 🌼 daisyUI 5.5.19 */

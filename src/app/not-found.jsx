@@ -1,4 +1,6 @@
 "use client"
+
+import Link from "next/link";
 const NotFound = () => {
     return (
         <div>
@@ -45,13 +47,13 @@ const NotFound = () => {
 
         {/* Buttons */}
         <div className="flex gap-3 justify-center flex-wrap">
-          <a href="/" className="btn btn-neutral gap-2">
+          <Link href="/" className="btn btn-neutral gap-2">
             <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
               <polyline points="9 22 9 12 15 12 15 22" />
             </svg>
             Go home
-          </a>
+          </Link>
           <button onClick={() => history.back()} className="btn btn-outline gap-2">
             <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <polyline points="15 18 9 12 15 6" />

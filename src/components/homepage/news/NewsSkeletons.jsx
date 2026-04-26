@@ -17,12 +17,18 @@ export const LeftSidebarSkeleton = () => {
 
 export const RightSidebarSkeleton = () => {
   return (
-    <div>
-      <Skeleton width={110} height={28} className="mb-4" />
-      <div className="flex flex-col gap-2">
-        <Skeleton height={44} borderRadius={8} />
-        <Skeleton height={44} borderRadius={8} />
+    <div className="space-y-5">
+      <div>
+        <Skeleton width={110} height={16} />
+        <Skeleton width={150} height={28} className="mt-3" />
+        <Skeleton width="90%" height={16} className="mt-3 mb-5" />
+        <div className="flex flex-col gap-3">
+          <Skeleton height={68} borderRadius={24} />
+          <Skeleton height={68} borderRadius={24} />
+        </div>
       </div>
+      <Skeleton height={170} borderRadius={28} />
+      <Skeleton height={170} borderRadius={28} />
     </div>
   );
 };

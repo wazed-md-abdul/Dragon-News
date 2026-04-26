@@ -2,15 +2,11 @@ import LeftSidebar from "@/components/homepage/news/LeftSidebar";
 import NewsCard from "@/components/homepage/news/NewsCard";
 import RightSidebar from "@/components/homepage/news/RightSidebar";
 import { getCategories, getNewsByCategoryId } from "@/lib/data";
-import React from "react";
 
 const NewsCategoryPage = async ({ params }) => {
   const { id } = await params;
-  console.log(id, "paramsRes");
-
   const categories = await getCategories();
   const news = await getNewsByCategoryId(id);
-
 
   return (
     <div className="container mx-auto my-[40px] grid grid-cols-1 gap-6 px-4 md:my-[60px] md:grid-cols-12">
@@ -19,7 +15,12 @@ const NewsCategoryPage = async ({ params }) => {
       </div>
 
       <div className="md:col-span-6">
-        <h2 className="font-bold text-lg">News by category</h2>
+        <div className="reveal-up reveal-delay-1">
+          <p className="section-kicker">Coverage</p>
+          <h2 className="editorial-heading mt-3 text-3xl font-bold text-slate-900">
+            News by category
+          </h2>
+        </div>
         <div className="space-y-4 mt-6">
           {news.length > 0 ? (
             news.map((n) => {
