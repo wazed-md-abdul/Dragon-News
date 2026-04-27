@@ -89,7 +89,7 @@ const NewsDetailsPage = async ({ params }) => {
             </div>
 
             <Link href={`/category/${news.category_id}`} className="w-full sm:w-auto">
-              <button className="btn w-full bg-purple-500 text-white sm:w-auto">
+              <button className="inline-flex w-full items-center justify-center rounded-full bg-slate-900 px-5 py-3 text-sm font-semibold text-white transition duration-300 hover:-translate-y-0.5 hover:bg-blue-600 sm:w-auto">
                 See other news for this category <BsArrowRight />
               </button>
             </Link>
