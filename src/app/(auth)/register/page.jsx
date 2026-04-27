@@ -9,7 +9,7 @@ export default  function Login () {
     const onSubmit  = async (e) => {
         e.preventDefault();
         const formDataObj = Object.fromEntries(new FormData(e.currentTarget));
-        console.log(formDataObj);
+    
         const {data,error} = await authClient.signUp.email(formDataObj);
         if(error){
             toast.warning(`${error.message}`, {

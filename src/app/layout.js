@@ -1,3 +1,8 @@
+
+import dns from "node:dns";
+dns.setServers(["8.8.8.8", "8.8.4.4"]);
+
+
 import { Merriweather, Poppins } from "next/font/google";
 import "./globals.css";
 

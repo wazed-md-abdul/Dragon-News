@@ -25,6 +25,8 @@ const spotlightSections = [
 
 
 const RightSidebar = () => {
+ 
+  
 
   const handleGoogleSignin = async () => {
     await authClient.signIn.social({
@@ -37,6 +39,8 @@ const RightSidebar = () => {
       provider: "github",
     });
   };
+
+  
   return (
     <div className="space-y-5">
       <div className="surface-panel hover-lift reveal-up rounded-[30px] p-5">

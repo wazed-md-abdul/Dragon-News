@@ -9,9 +9,9 @@ import { IoIosStar } from "react-icons/io";
 
 export const generateMetadata = async ({ params }) => {
   const { id } = await params;
-  console.log(id, "params");
+
   const news = await getNewsDetailsById(id);
-  console.log(news, "news");
+
 
   return {
     title: news.title,
@@ -21,9 +21,9 @@ export const generateMetadata = async ({ params }) => {
 
 const NewsDetailsPage = async ({ params }) => {
   const { id } = await params;
-  //   console.log(id, "params");
+  
   const news = await getNewsDetailsById(id);
-  //   console.log(news, "news");
+ 
   return (
     <div className="mx-auto my-6 max-w-4xl px-4 sm:my-8">
       <div className="card bg-base-100 shadow-sm">
