@@ -22,21 +22,21 @@ const spotlightSections = [
     accent: "from-amber-400/20 via-white/80 to-rose-400/10",
   },
 ];
+
+
+const RightSidebar = () => {
+
   const handleGoogleSignin = async () => {
     await authClient.signIn.social({
       provider: "google",
     });
   };
 
-  // const handleGithubSignin = async () => {
-  //   await authClient.signIn.social({
-  //     provider: "github",
-  //   });
-  // };
-
-const RightSidebar = () => {
-
-
+  const handleGithubSignin = async () => {
+    await authClient.signIn.social({
+      provider: "github",
+    });
+  };
   return (
     <div className="space-y-5">
       <div className="surface-panel hover-lift reveal-up rounded-[30px] p-5">
@@ -74,7 +74,7 @@ const RightSidebar = () => {
 
           <button
             className="group flex w-full items-center gap-3 rounded-[24px] border border-slate-800 bg-slate-900 px-4 py-3 text-left text-white transition duration-300 hover:-translate-y-0.5 hover:bg-slate-800 hover:shadow-[0_20px_44px_rgba(15,23,42,0.22)]"
-            // onClick={handleGithubSignin}
+            onClick={handleGithubSignin}
           >
             <span className="grid h-11 w-11 shrink-0 place-items-center rounded-full bg-white/10 text-lg">
               <FaGithub />
