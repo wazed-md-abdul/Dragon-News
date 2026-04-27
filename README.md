@@ -1,38 +1,107 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# NewsJournal
+
+<p align="center">
+  <img src="./src/assets/mockup.png" alt="NewsJournal mockup preview" width="100%" />
+</p>
+
+<p align="center">
+  A modern news portal built with Next.js, polished UI components, category-based browsing, and social authentication.
+</p>
+
+## Overview
+
+NewsJournal is a responsive news website focused on clean reading, category-based discovery, and a more polished editorial feel. It includes styled homepage sections, animated UI details, dedicated About and Career pages, and login support with Google and GitHub.
+
+## Visual Highlights
+
+- Editorial-style homepage with refined typography and subtle reveal animations
+- Right sidebar with Google-style social sign-in treatment
+- Dedicated About and Career sections with branded content blocks
+- Loading skeletons for smoother perceived performance
+- Breaking news marquee for fast headline scanning
+
+## Tech Stack
+
+- `Next.js 16`
+- `React 19`
+- `Tailwind CSS 4`
+- `HeroUI`
+- `DaisyUI`
+- `better-auth`
+- `@better-auth/mongo-adapter`
+- `MongoDB`
+- `Google Auth`
+- `GitHub Auth`
+- `react-loading-skeleton`
+- `react-fast-marquee`
+- `react-icons`
+- `date-fns`
+
+## Features
+
+- Browse news by category
+- View detailed news pages
+- Sign in with Google
+- Sign in with GitHub
+- Responsive layout for desktop and mobile
+- Skeleton loading states
+- Breaking news marquee component
+- Styled About and Career pages
+- Clean hover effects and reveal animations
+
+## Workflow
+
+```mermaid
+flowchart LR
+    A[Open Home] --> B[Browse Categories]
+    B --> C[Read News Cards]
+    C --> D[Open Full News Details]
+    A --> E[Login with Google or GitHub]
+    A --> F[Visit About Page]
+    A --> G[Visit Career Page]
+```
+
+## Project Structure
+
+```bash
+src/
+  app/
+    (main)/
+      about-us/
+      career/
+      category/[id]/
+      news/[id]/
+  components/
+    homepage/news/
+    shared/
+  lib/
+  assets/
+```
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Then open `http://localhost:3000`.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Main Packages Used
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- `@heroui/react`
+- `@heroui/styles`
+- `better-auth`
+- `mongodb`
+- `tailwindcss`
+- `daisyui`
+- `react-loading-skeleton`
+- `react-fast-marquee`
 
-## Learn More
+## Notes
 
-To learn more about Next.js, take a look at the following resources:
+- Social login is wired for `Google` and `GitHub`
+- UI styling combines `Tailwind CSS`, `HeroUI`, and `DaisyUI`
+- Loading states use `react-loading-skeleton`
+- Headline ticker uses `react-fast-marquee`
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-# Dragon-News
-# Dragon-News
