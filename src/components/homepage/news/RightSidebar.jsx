@@ -22,8 +22,6 @@ const spotlightSections = [
     accent: "from-amber-400/20 via-white/80 to-rose-400/10",
   },
 ];
-
-const RightSidebar = () => {
   const handleGoogleSignin = async () => {
     await authClient.signIn.social({
       provider: "google",
@@ -35,6 +33,9 @@ const RightSidebar = () => {
       provider: "github",
     });
   };
+
+const RightSidebar = () => {
+
 
   return (
     <div className="space-y-5">
